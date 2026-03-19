@@ -5,13 +5,15 @@ Unified AI CLI and Python library. One interface for OpenAI, Google Gemini, and 
 ## Install
 
 ```bash
-# All providers
-uv pip install -e ".[all]"
+pip install git+https://github.com/eka-care/ocean.git
+```
 
-# Or selectively
-uv pip install -e ".[openai]"
-uv pip install -e ".[gemini]"
-uv pip install -e ".[bedrock]"
+For local development:
+
+```bash
+git clone https://github.com/eka-care/ocean.git
+cd ocean
+uv pip install -e .
 ```
 
 ## Credentials
