@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ocean"
+version = "0.1.0"
+description = "Unified AI CLI & Library — one interface for OpenAI, Gemini, and Bedrock"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+authors = [{ name = "Eka Care", email = "dev@eka.care" }]
+
+[project.urls]
+Homepage = "https://github.com/ekacare/ocean"
+Repository = "https://github.com/ekacare/ocean"
+dependencies = [
+    "click>=8.0",
+    "pydantic>=2.0",
+    "python-dotenv>=1.0",
+    "rich>=13.0",
+    "prompt_toolkit>=3.0",
+]
+
+[project.optional-dependencies]
+openai = ["openai>=1.0"]
+gemini = ["google-genai>=1.0"]
+bedrock = ["boto3>=1.28"]
+all = [
+    "openai>=1.0",
+    "google-genai>=1.0",
+    "boto3>=1.28",
+]
+
+[project.scripts]
+ocean = "ocean.cli:main"
