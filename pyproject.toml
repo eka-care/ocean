@@ -10,10 +10,6 @@ readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.10"
 authors = [{ name = "Eka Care", email = "dev@eka.care" }]
-
-[project.urls]
-Homepage = "https://github.com/eka-care/ocean"
-Repository = "https://github.com/eka-care/ocean"
 dependencies = [
     "click>=8.0",
     "pydantic>=2.0",
@@ -24,6 +20,10 @@ dependencies = [
     "google-genai>=1.0",
     "boto3>=1.28",
 ]
+
+[project.urls]
+Homepage = "https://github.com/eka-care/ocean"
+Repository = "https://github.com/eka-care/ocean"
 
 [project.scripts]
 ocean = "ocean.cli:main"
